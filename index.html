@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuoteVault — Aesthetic Quote & Card Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="theme-dark">
+  <main class="container">
+    <header class="top-bar">
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>QuoteVault</h1>
+      </div>
+
+      <div class="theme-switcher" role="group" aria-label="Theme Switcher">
+        <button class="theme-btn active" data-theme="theme-dark" title="Midnight">Midnight</button>
+        <button class="theme-btn" data-theme="theme-pastel" title="Pastel">Pastel</button>
+        <button class="theme-btn" data-theme="theme-light" title="Minimal">Minimal</button>
+      </div>
+    </header>
+
+    <nav class="filters" aria-label="Quote Categories">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="coding">Coding</button>
+      <button class="filter-btn" data-category="focus">Focus</button>
+      <button class="filter-btn" data-category="mindset">Mindset</button>
+      <button class="filter-btn" data-category="design">Design</button>
+    </nav>
+
+    <section class="quote-card" id="quoteCard">
+      <span class="tag" id="quoteTag">CODING</span>
+      <blockquote class="quote-text" id="quoteText">
+        "First, solve the problem. Then, write the code."
+      </blockquote>
+      <p class="quote-author" id="quoteAuthor">— John Johnson</p>
+    </section>
+
+    <section class="controls">
+      <button id="newQuoteBtn" class="btn primary">New Quote</button>
+      <button id="copyBtn" class="btn secondary">Copy Text</button>
+      <button id="downloadBtn" class="btn secondary">Export PNG</button>
+    </section>
+
+    <p class="toast" id="toast" aria-live="polite"></p>
+  </main>
+
+  <canvas id="exportCanvas" width="1080" height="1080" hidden></canvas>
+  <script src="script.js"></script>
+</body>
+</html>
